@@ -30,9 +30,19 @@ p{
   text-wrap: pretty;
 }
 
-.auto-grid{
+.grida{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   place-content: center;
+}
+/* #031a6d; */
+.card-shadow{
+  box-shadow: -1rem -1rem 0 0 #031a6d;
+  background-color: rgba(3, 26, 109, 0.377);
+}
+
+.card-shadow:nth-child(2n){
+  box-shadow: -1rem -1rem 0 0 rgb(0, 61, 56);
+  background-color: rgba(0, 61, 56, 0.37);
 }

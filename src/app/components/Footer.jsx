@@ -10,7 +10,7 @@ const Footer = () => {
               <h3 className="text-2xl text-center">YME</h3>
             </div>
             <p className="text-center text-primary">
-              Contrata tu pega
+              Recruiment
             </p>
           </div>
           <div>

@@ -11,26 +11,27 @@ const Navbar = () => {
   const ref = useRef(null);
   gsap.registerPlugin(useGSAP);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      gsap.to(ref.current, {
-        duration: 0.5,
-        height: "auto",
-        opacity: 1,
-        ease: "power2.inOut",
-      });
-    }
-    if (!isMenuOpen) {
-      gsap.to(ref.current, {
-        duration: 0.5,
-        height: 0,
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    }
-  }, [isMenuOpen]);
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     gsap.to(ref.current, {
+  //       duration: 0.5,
+  //       height: "auto",
+  //       opacity: 1,
+  //       ease: "power2.inOut",
+  //     });
+  //   }
+  //   if (!isMenuOpen) {
+  //     gsap.to(ref.current, {
+  //       duration: 0.5,
+  //       height: 0,
+  //       opacity: 0,
+  //       ease: "power2.inOut",
+  //     });
+  //   }
+  // }, [isMenuOpen]);
+
   return (
-    <nav className="bg-secondary">
+    <nav className="bg-text">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="" className="h-10 w-20" alt="logo yme" />
@@ -71,16 +72,16 @@ const Navbar = () => {
             <li>
               <a
                 href="#home"
-                className="block py-2 px-3 text-text rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-secondary md:border-0 md:p-0 "
+                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
                 aria-current="page"
               >
-                placeholder
+                Home
               </a>
             </li>
             <li>
               <a
                 href="#servicios"
-                className="block py-2 px-3 text-text rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-secondary md:border-0 md:p-0 "
+                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
               >
                 placeholder
               </a>
@@ -88,7 +89,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#testimonios"
-                className="block py-2 px-3 text-text rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-secondary md:border-0 md:p-0 "
+                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
               >
                 placeholder
               </a>
