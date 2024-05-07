@@ -1,18 +1,39 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 // import logo from "../assets/logos/logo.svg";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const ref = useRef(null);
+  gsap.registerPlugin(useGSAP);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      gsap.to(ref.current, {
+        duration: 0.5,
+        height: "auto",
+        opacity: 1,
+        ease: "power2.inOut",
+      });
+    }
+    if (!isMenuOpen) {
+      gsap.to(ref.current, {
+        duration: 0.5,
+        height: 0,
+        opacity: 0,
+        ease: "power2.inOut",
+      });
+    }
+  }, [isMenuOpen]);
   return (
-    <nav className="border-gray-200">
+    <nav className="bg-secondary">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-        <a
-          href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <img src="" className="h-10 w-20" alt="Logo Yme" />
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="" className="h-10 w-20" alt="logo yme" />
           {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Zona Vip
           </span> */}
@@ -38,7 +59,9 @@ const Navbar = () => {
             />
           </svg>
         </button>
+        {/* <div>YME</div> */}
         <div
+          ref={ref}
           className={`w-full md:block md:w-auto ${
             isMenuOpen ? "block" : "hidden"
           }`}
@@ -51,7 +74,7 @@ const Navbar = () => {
                 className="block py-2 px-3 text-text rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-secondary md:border-0 md:p-0 "
                 aria-current="page"
               >
-                Inicio
+                placeholder
               </a>
             </li>
             <li>
@@ -59,7 +82,7 @@ const Navbar = () => {
                 href="#servicios"
                 className="block py-2 px-3 text-text rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-secondary md:border-0 md:p-0 "
               >
-                Servicios
+                placeholder
               </a>
             </li>
             <li>
@@ -67,7 +90,7 @@ const Navbar = () => {
                 href="#testimonios"
                 className="block py-2 px-3 text-text rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-secondary md:border-0 md:p-0 "
               >
-                Testimonios
+                placeholder
               </a>
             </li>
           </ul>
