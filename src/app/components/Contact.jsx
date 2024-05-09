@@ -12,10 +12,6 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  useEffect(() => {
-    console.log(file);
-  }, [file]);
-
   const notify = () =>
     toast.success("Mensaje enviado", {
       position: "top-right",
