@@ -1,11 +1,17 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import TextAnimate from "@/components/TextAnimate";
 
 export default function Contact() {
+  const [file, setFile] = useState(null);
+
+  useEffect(() => {
+    console.log(file);
+  }, [file]);
+
   const notify = () =>
     toast.success("Mensaje enviado", {
       position: "top-right",
@@ -17,27 +23,62 @@ export default function Contact() {
       progress: undefined,
       theme: "light",
     });
+
   const form = useRef();
 
-  const sendEmail = (e) => {
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       process.env.NEXT_PUBLIC_MAIL_SERVICE,
+  //       process.env.NEXT_PUBLIC_MAIL_TEMPLATE,
+  //       form.current,
+  //       process.env.NEXT_PUBLIC_MAIL_USER,
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       },
+  //       e.target.reset(),
+  //       notify()
+  //     );
+  // };
+
+  // const sendEmail = async (e) => {
+  //   e.preventDefault();
+  //   const formData = new FormData(form.current);
+  //   formData.append("file", file);
+  //   try {
+  //     const res = await fetch("/api/send", {
+  //       method: "POST",
+  //       body: "hello world",
+  //     });
+  //     if (res.ok) {
+  //       notify();
+  //       form.current.reset();
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_MAIL_SERVICE,
-        process.env.NEXT_PUBLIC_MAIL_TEMPLATE,
-        form.current,
-        process.env.NEXT_PUBLIC_MAIL_USER,
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        },
-        e.target.reset(),
-        notify()
-      );
+    await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ file }),
+    }).then((res) => {
+      if (res.ok) {
+        notify();
+        form.current.reset();
+      }
+    });
   };
 
   return (
@@ -47,7 +88,7 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-6xl  text-center font-museomoderno font-bold tracking-tight text-secondary">
-          Contactanos
+          Contacto
         </h2>
         {/* <TextAnimate
           once
@@ -77,7 +118,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                required
+                // required
                 type="text"
                 name="nombre"
                 id="nombre"
@@ -109,7 +150,7 @@ export default function Contact() {
               htmlFor="empresa"
               className="block text-sm font-semibold leading-6 text-text"
             >
-              Empresa
+              Cargo
             </label>
             <div className="mt-2.5">
               <input
@@ -130,7 +171,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                required
+                // required
                 type="email"
                 name="email"
                 id="email"
@@ -148,7 +189,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                required
+                // required
                 type="tel"
                 name="numero-telefono"
                 id="numero-telefono"
@@ -157,7 +198,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          {/* <div className="">
+          <div className="">
             <label
               htmlFor="file"
               className="block text-sm font-semibold leading-6 text-text"
@@ -166,7 +207,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                required
+                // required
                 type="file"
                 accept=".pdf,.doc,.docx,.odt"
                 name="file"
@@ -178,9 +219,18 @@ export default function Contact() {
                 file:bg-accent file:text-white
                 hover:file:cursor-pointer hover:file:bg-secondary
               "
+                onChange={(e) => {
+                  const file = e.target.files[0];
+                  const reader = new FileReader();
+                  reader.onload = (e) => {
+                    const fileData = e.target.result;
+                    setFile(fileData);
+                  };
+                  reader.readAsDataURL(file);
+                }}
               />
             </div>
-          </div> */}
+          </div>
           <div className="sm:col-span-2">
             <label
               htmlFor="mensaje"
@@ -190,7 +240,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <textarea
-                required
+                // required
                 name="mensaje"
                 id="mensaje"
                 rows={4}
