@@ -12,8 +12,6 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-
-
   useEffect(() => {
     console.log(file);
   }, [file]);
@@ -31,45 +29,6 @@ export default function Contact() {
     });
 
   const form = useRef();
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   emailjs
-  //     .sendForm(
-  //       process.env.NEXT_PUBLIC_MAIL_SERVICE,
-  //       process.env.NEXT_PUBLIC_MAIL_TEMPLATE,
-  //       form.current,
-  //       process.env.NEXT_PUBLIC_MAIL_USER,
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       },
-  //       e.target.reset(),
-  //       notify()
-  //     );
-  // };
-
-  // const sendEmail = async (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData(form.current);
-  //   formData.append("file", file);
-  //   try {
-  //     const res = await fetch("/api/send", {
-  //       method: "POST",
-  //       body: "hello world",
-  //     });
-  //     if (res.ok) {
-  //       notify();
-  //       form.current.reset();
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -130,7 +89,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                // required
+                required
                 type="text"
                 name="nombre"
                 id="nombre"
@@ -167,6 +126,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 type="text"
                 name="cargo"
                 id="cargo"
@@ -185,7 +145,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                // required
+                required
                 type="email"
                 name="email"
                 id="email"
@@ -204,7 +164,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                // required
+                required
                 type="tel"
                 name="telNum"
                 id="telNum"
@@ -223,7 +183,7 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
-                // required
+                required
                 type="file"
                 accept=".pdf,.doc,.docx,.odt"
                 name="file"
