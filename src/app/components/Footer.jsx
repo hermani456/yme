@@ -1,3 +1,5 @@
+import footerLogo from "../../../public/assets/svg/footerLogo.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -6,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between gap-5">
           <div className="flex flex-col justify-center items-center gap-3 w-full sm:w-1/4 ">
             <div className="flex flex-col justify-center items-center">
-              <img src="" alt="logo yme" width={90} height={90} />
-              <h3 className="text-2xl text-center">YME</h3>
+              <Image src={footerLogo} alt="logo yme" width={90} height={90} />
+              <h3 className="text-2xl text-center">Yme</h3>
             </div>
             <p className="text-center text-primary">
               Recruiment

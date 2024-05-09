@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { logo } from "../../../public/assets/svg";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -32,13 +34,16 @@ const Navbar = () => {
 
   return (
     <nav className="bg-text">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="" className="h-10 w-20" alt="logo yme" />
-          {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5">
+        {/* <a href="/" className=""> */}
+        {/* <img src={logo} className="h-10 w-20" alt="logo yme" /> */}
+        <div>
+          <Image src={logo} alt="logo" width={125} className="m-0 p-0"/>
+        </div>
+        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Zona Vip
           </span> */}
-        </a>
+        {/* </a> */}
         <button
           type="button"
           onClick={toggleMenu}
