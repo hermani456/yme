@@ -7,6 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const [file, setFile] = useState(null);
+  const [name, setName] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+
 
   useEffect(() => {
     console.log(file);
@@ -67,12 +73,18 @@ export default function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    const userData = {
+      name,
+      cargo,
+      email,
+      phone,
+    };
     await fetch("/api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ file }),
+      body: JSON.stringify({ file, userData }),
     }).then((res) => {
       if (res.ok) {
         notify();
@@ -124,6 +136,7 @@ export default function Contact() {
                 id="nombre"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
           </div>
@@ -147,7 +160,7 @@ export default function Contact() {
           </div> */}
           <div className="sm:col-span-2">
             <label
-              htmlFor="empresa"
+              htmlFor="cargo"
               className="block text-sm font-semibold leading-6 text-text"
             >
               Cargo
@@ -155,10 +168,11 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="empresa"
-                id="empresa"
+                name="cargo"
+                id="cargo"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                onChange={(e) => setCargo(e.target.value)}
               />
             </div>
           </div>
@@ -177,12 +191,13 @@ export default function Contact() {
                 id="email"
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
-              htmlFor="numero-telefono"
+              htmlFor="telNum"
               className="block text-sm font-semibold leading-6 text-text"
             >
               Telefono
@@ -191,10 +206,11 @@ export default function Contact() {
               <input
                 // required
                 type="tel"
-                name="numero-telefono"
-                id="numero-telefono"
+                name="telNum"
+                id="telNum"
                 autoComplete="tel"
                 className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
           </div>
@@ -231,7 +247,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2">
             <label
               htmlFor="mensaje"
               className="block text-sm font-semibold leading-6 text-text"
@@ -248,7 +264,7 @@ export default function Contact() {
                 defaultValue={""}
               />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mt-10">
           <button

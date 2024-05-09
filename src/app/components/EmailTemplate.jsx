@@ -1,8 +1,10 @@
 import * as React from "react";
 
-export const EmailTemplate = ({ firstName }) => (
+export const EmailTemplate = ({ name, email, phone }) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
+    <h1>{name}</h1>
+    <p>{email}</p>
+    <p>{phone}</p>
   </div>
 );
 
