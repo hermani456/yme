@@ -1,6 +1,5 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import TextAnimate from "@/components/TextAnimate";
