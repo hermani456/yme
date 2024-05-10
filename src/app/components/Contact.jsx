@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const [file, setFile] = useState(null);
+  const [fileExtension, setFileExtension] = useState("");
   const [name, setName] = useState("");
   const [cargo, setCargo] = useState("");
   const [email, setEmail] = useState("");
@@ -38,7 +39,7 @@ export default function Contact() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ file, userData }),
+      body: JSON.stringify({ file, userData, fileExtension }),
     }).then((res) => {
       if (res.ok) {
         notify();
@@ -192,6 +193,17 @@ export default function Contact() {
               "
                 onChange={(e) => {
                   const file = e.target.files[0];
+                  const fileExtension = file.name.split(".").pop();
+                  if (
+                    fileExtension !== "pdf" &&
+                    fileExtension !== "doc" &&
+                    fileExtension !== "docx" &&
+                    fileExtension !== "odt"
+                  ) {
+                    e.target.value = null;
+                    return alert("Solo se permiten archivos .pdf, .doc, .docx y .odt");
+                  }
+                  setFileExtension(fileExtension);
                   const reader = new FileReader();
                   reader.onload = (e) => {
                     const fileData = e.target.result;
