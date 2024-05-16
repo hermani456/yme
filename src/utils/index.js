@@ -27,5 +27,5 @@ export const cardInfo = [
       "¿Buscas unirte a un equipo apasionado por la inclusión y la innovación? En YME, valoramos el talento y la diversidad. Descubre nuestras oportunidades laborales y únete a nosotros en este viaje hacia un futuro más inclusivo y equitativo.",
     price: "text",
     bgColor: "bg-textDark",
-  },
+  }
 ];

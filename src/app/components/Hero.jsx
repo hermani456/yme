@@ -20,7 +20,6 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex flex-1 justify-center min-w-80">
-            {/* <img src={happy} alt="foto yme" className="w-80" /> */}
             <Image src={happy} alt="foto" className="rounded-md"/>
           </div>
         </div>

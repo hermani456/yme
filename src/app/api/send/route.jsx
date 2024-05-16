@@ -1,4 +1,4 @@
-import { YmeEmailTemplate } from '../../../emails/YmeEmailTemplate.jsx';
+import { YmeEmailTemplate } from "../../../emails/YmeEmailTemplate.jsx";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -15,11 +15,13 @@ export async function POST(req) {
   );
   try {
     const data = await resend.emails.send({
-      from: "Yme.cL <onboarding@resend.dev>",
-      to: ["hermani457@gmail.com"],
+      from: "Yme.cL <send@yme.cl>",
+      to: ["ymerecruitmentcl@gmail.com"],
       subject: "Yme - Solicitud de empleo",
-      react: YmeEmailTemplate({name, cargo, email, phone}),
-      attachments: [{ filename: `${name}.${fileExtension}`, content: fileBuffer }],
+      react: YmeEmailTemplate({ name, cargo, email, phone }),
+      attachments: [
+        { filename: `${name}.${fileExtension}`, content: fileBuffer },
+      ],
     });
 
     return Response.json(data);
