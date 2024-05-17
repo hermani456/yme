@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-body{
-  font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
   /* line-height: 1.5; */
   background-color: "#F9F7F3";
 }
@@ -16,28 +16,35 @@ body{
   box-sizing: border-box;
 }
 
-img, svg, video{
+img,
+svg,
+video {
   display: block;
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-p{
+p {
   max-width: 75ch;
   text-wrap: pretty;
 }
 
-.grida{
+.grida {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   place-content: center;
 }
 /* #031a6d; */
-.card-shadow{
+/* .card-shadow{
   box-shadow: -1rem -1rem 0 0 #031a6d;
   background-color: rgba(3, 26, 109, 0.377);
 }
@@ -45,4 +52,14 @@ p{
 .card-shadow:nth-child(2n){
   box-shadow: -1rem -1rem 0 0 rgb(0, 61, 56);
   background-color: rgba(0, 61, 56, 0.37);
+} */
+
+.clas::before {
+  content: "";
+  background: conic-gradient(
+    rgba(244, 114, 182, 0.4) 0deg,
+    rgba(192, 132, 252, 0.4) 0deg,
+    transparent 80deg
+  );
+  position: absolute;
 }

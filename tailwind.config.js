@@ -18,6 +18,22 @@ module.exports = {
         primaryDark: "#5d7089",
         secondaryDark: "#c2fffa",
         accentDark: "#6859d9",
+        secondaryLight: "#026f66",
+        'bluish': {
+          '50': '#e6e8f0',
+          '100': '#e6efff',
+          '200': '#d0e2ff',
+          '300': '#aac6ff',
+          '400': '#7aa1ff',
+          '500': '#4572ff',
+          '600': '#1f49ff',
+          '700': '#0d37f4',
+          '800': '#0a2dcd',
+          '900': '#0b27a7',
+          '950': '#031a6d',
+      },
+      
+      
       },
     },
   },
