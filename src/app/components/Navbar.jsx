@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { logo } from "../../../public/assets/svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
         {/* <a href="/" className=""> */}
         {/* <img src={logo} className="h-10 w-20" alt="logo yme" /> */}
         <div>
-          <Image src={logo} alt="logo" width={125} className="m-0 p-0"/>
+          <Image src={logo} alt="logo" width={125} className="m-0 p-0" />
         </div>
         {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Zona Vip
@@ -75,29 +76,24 @@ const Navbar = () => {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             <li>
-              <a
-                href="#home"
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-                aria-current="page"
-              >
+              <Link className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 " href={"#home"}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#servicios"
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-              >
-                placeholder
-              </a>
+              <Link className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 " href={"#mision"}>
+                Mision y Vision
+              </Link>
             </li>
             <li>
-              <a
-                href="#testimonios"
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-              >
-                placeholder
-              </a>
+              <Link className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 " href={"#expertise"}>
+                Expertise
+              </Link>
+            </li>
+            <li>
+              <Link className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 " href={"#contact"}>
+                Contacto
+              </Link>
             </li>
           </ul>
         </div>

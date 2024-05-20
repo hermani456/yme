@@ -55,10 +55,10 @@ export default function Contact() {
   return (
     <section
       className="bg-background px-6 py-24 sm:py-20 lg:px-8 font-montserrat"
-      id="contacto"
+      id="contact"
     >
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-6xl  text-center font-museomoderno font-bold tracking-tight text-secondary">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl  text-center font-museomoderno font-bold tracking-tight text-secondary">
           Contacto
         </h2>
         {/* <TextAnimate
