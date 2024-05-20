@@ -11,6 +11,7 @@ export default function Contact() {
   const [cargo, setCargo] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [acceptPolicy, setAcceptPolicy] = useState(false);
 
   const notify = () =>
     toast.success("Mensaje enviado", {
@@ -28,6 +29,9 @@ export default function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    if (!acceptPolicy) {
+      return alert("Debes aceptar la política de privacidad");
+    }
     const userData = {
       name,
       cargo,
@@ -212,6 +216,31 @@ export default function Contact() {
                   reader.readAsDataURL(file);
                 }}
               />
+            </div>
+          </div>
+          <div className="sm:col-span-2">
+            <div className="flex items-center">
+              <input
+                required
+                type="checkbox"
+                name="acceptPolicy"
+                id="acceptPolicy"
+                className="rounded text-primary border-0 focus:ring-2 focus:ring-inset focus:ring-primary"
+                onChange={(e) => setAcceptPolicy(e.target.checked)}
+              />
+              <label
+                htmlFor="acceptPolicy"
+                className="ml-2 text-sm font-semibold leading-6 text-text"
+              >
+                Acepto que Yme pueda utilizar mis datos y compartirlos con posibles empleadores.
+                {/* <a
+                  href="#"
+                  className="text-primary hover:text-secondary"
+                  target="_blank"
+                >
+                  política de privacidad
+                </a> */}
+              </label>
             </div>
           </div>
           {/* <div className="sm:col-span-2">
