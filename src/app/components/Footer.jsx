@@ -1,5 +1,6 @@
 import footerLogo from "../../../public/assets/svg/footerLogo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,15 +19,18 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl">Navegación</h3>
             <ul className="">
-              <a href="#home">
+              <Link href="/#home">
                 <li>Inicio</li>
-              </a>
-              <a href="/#servicios">
-                <li>Servicios</li>
-              </a>
-              <a href="/#testimonios">
-                <li>Testimonios</li>
-              </a>
+              </Link>
+              <Link href="/#mision">
+                <li>Mision y Vision</li>
+              </Link>
+              <Link href="/#expertise">
+                <li>Expertise</li>
+              </Link>
+              <Link href="/#contact">
+                <li>Contacto</li>
+              </Link>
             </ul>
           </div>
           {/* <div>
