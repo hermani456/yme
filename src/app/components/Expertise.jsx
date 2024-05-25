@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const Expertise = () => {
   return (
-    <section id="expertise" className="bg-background">
+    <section id="expertise" className="bg-background pb-5">
       <div className="max-w-screen-xl mx-auto p-5">
         <div>
-          <h2 className="text-4xl text-secondary font-bold text-center mb-5">
+          <h2 className="text-4xl text-secondary font-bold text-center pb-10">
             Areas de Expertise
           </h2>
         </div>
@@ -15,7 +15,7 @@ const Expertise = () => {
           <div className="gridb">
             {expertise.map((area) => (
               <div key={area.id} className="flex flex-col items-center">
-                <h2 className="text-text">{area.title}</h2>
+                <h2 className="text-text font-medium">{area.title}</h2>
                 <Image src={area.img} alt="svg image" className="w-12" />
               </div>
             ))}

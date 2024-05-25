@@ -69,7 +69,7 @@ const Navbar = () => {
         {/* <div>YME</div> */}
         <div
           ref={ref}
-          className={`w-full md:block md:w-auto ${
+          className={`w-full md:block md:w-auto mb-5 ${
             isMenuOpen ? "block" : "hidden"
           }`}
           id="navbar-default"

@@ -54,30 +54,18 @@ export default function Contact() {
 
   return (
     <section
-      className="bg-background px-6 py-24 sm:py-20 lg:px-8 font-montserrat"
+      className="bg-background font-montserrat p-5"
       id="contact"
     >
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl  text-center font-museomoderno font-bold tracking-tight text-secondary">
+      <div className="max-w-screen-xl mx-auto my-auto text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-museomoderno font-bold tracking-tight text-secondary">
           Contacto
         </h2>
-        {/* <TextAnimate
-          once
-          text="Contactanos"
-          className="text-3xl sm:text-4xl lg:text-6xl  text-center font-museomoderno font-bold tracking-tight text-white"
-          Wrapper="h2"
-        />
-        <TextAnimate
-          once
-          text="Te responderemos a la brevedad."
-          className="mt-2  text-lg leading-8 text-orange-600"
-          Wrapper="p"
-        /> */}
       </div>
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="mx-auto mt-16 max-w-xl sm:mt-20"
+        className="mx-auto pt-5 max-w-xl sm:pt-14"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">

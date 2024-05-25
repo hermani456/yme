@@ -5,6 +5,7 @@ import CardSection from "./components/Cardsection";
 import Contact from "./components/Contact";
 import MovingText from "./components/MovingText";
 import Expertise from "./components/Expertise";
+import PhotoSection from "./components/PhotoSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <CardSection />
       <Expertise />
+      <PhotoSection />
       <Contact />
       <Footer />
     </>
