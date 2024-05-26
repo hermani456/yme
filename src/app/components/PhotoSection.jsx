@@ -14,7 +14,7 @@ const PhotoSection = () => {
   const images = [photo1, photo2, photo4];
 
   return (
-    <section className="bg-background">
+    <section id="charlas" className="bg-background">
       <div className="max-w-screen-xl m-auto p-5">
         <h1 className="text-4xl text-center text-secondary font-bold pb-10">
           Impulsa Tu Futuro con YME

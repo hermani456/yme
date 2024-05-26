@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { logo } from "../../../public/assets/svg";
 import Image from "next/image";
 import Link from "next/link";
+import { navItems } from "@/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -14,24 +15,29 @@ const Navbar = () => {
   const ref = useRef(null);
   gsap.registerPlugin(useGSAP);
 
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     gsap.to(ref.current, {
-  //       duration: 0.5,
-  //       height: "auto",
-  //       opacity: 1,
-  //       ease: "power2.inOut",
-  //     });
-  //   }
-  //   if (!isMenuOpen) {
-  //     gsap.to(ref.current, {
-  //       duration: 0.5,
-  //       height: 0,
-  //       opacity: 0,
-  //       ease: "power2.inOut",
-  //     });
-  //   }
-  // }, [isMenuOpen]);
+  useGSAP(() => {
+    if (window.innerWidth <= 768) {
+      if (isMenuOpen) {
+        gsap.to(ref.current, {
+          duration: 0.5,
+          autoAlpha: 1,
+          maxHeight: 1000, // larger than the actual height
+          ease: "power1.inOut",
+          onStart: () => gsap.set(ref.current, { display: "block" }),
+        });
+      } else {
+        gsap.to(ref.current, {
+          duration: 0.5,
+          autoAlpha: 0,
+          maxHeight: 0,
+          ease: "power1.inOut",
+          onComplete: () => gsap.set(ref.current, { display: "none" }),
+        });
+      }
+    }
+  }, [isMenuOpen]);
+
+  // const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className="bg-text">
@@ -69,38 +75,16 @@ const Navbar = () => {
           id="navbar-default"
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:border-0">
-            <li>
-              <Link
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-                href={"#home"}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-                href={"#mision"}
-              >
-                Mision y Vision
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-                href={"#expertise"}
-              >
-                Expertise
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
-                href={"#contact"}
-              >
-                Contacto
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <Link
+                  className="block py-2 px-3 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-primary md:border-0 md:p-0 "
+                  href={item.href}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

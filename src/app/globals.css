@@ -47,26 +47,18 @@ p {
   gap: 2rem;
   place-content: center;
 }
+
 .gridb {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
+
 .gridb > div {
   flex: 1 0 100px;
   max-width: 100px;
 }
-/* #031a6d; */
-/* .card-shadow{
-  box-shadow: -1rem -1rem 0 0 #031a6d;
-  background-color: rgba(3, 26, 109, 0.377);
-}
-
-.card-shadow:nth-child(2n){
-  box-shadow: -1rem -1rem 0 0 rgb(0, 61, 56);
-  background-color: rgba(0, 61, 56, 0.37);
-} */
 
 .clas::before {
   content: "";

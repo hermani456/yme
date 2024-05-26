@@ -4,7 +4,7 @@ import { cardInfo } from "../../utils/index";
 
 const CardSection = () => {
   return (
-    <section id="mision" className="bg-background pb-5">
+    <section id="about" className="bg-background pb-5">
       <h2 className="text-4xl text-secondary max-w-[30ch] mx-auto font-bold text-center pb-5">
         Transformando Recursos Humanos: Talento, Inclusión y Comunidad
       </h2>
