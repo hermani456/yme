@@ -31,7 +31,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="relative w-[25rem] min-h-[18.75rem]">
+      <div className="relative w-[25rem] min-h-[18.75rem] overflow-hidden rounded-md">
         {images.map((src, index) => (
           <div
             ref={(el) => (imageRefs.current[index] = el)}
@@ -42,7 +42,7 @@ const Carousel = ({ images }) => {
               width={400}
               height={200}
               alt="carousel"
-              className="absolute inset-0 object-cover rounded-md"
+              className="absolute inset-0 object-cover"
               onContextMenu={(e) => e.preventDefault()}
             />
           </div>

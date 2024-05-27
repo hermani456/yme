@@ -1,17 +1,12 @@
 import React from "react";
 import Carousel from "./Carousel";
-import handshake from "../../../public/assets/img/cards/handshake.png";
-import partners from "../../../public/assets/img/cards/partners.png";
-import foto1 from "../../../public/assets/img/cards/foto1.jpg";
-import foto2 from "../../../public/assets/img/cards/foto2.jpg";
 import photo1 from "../../../public/assets/img/photos/1.jpg";
 import photo2 from "../../../public/assets/img/photos/2.jpg";
-import photo3 from "../../../public/assets/img/photos/3.jpg";
 import photo4 from "../../../public/assets/img/photos/4.jpg";
-import photo5 from "../../../public/assets/img/photos/5.jpg";
+import photo6 from "../../../public/assets/img/photos/6.jpg";
 
 const PhotoSection = () => {
-  const images = [photo1, photo2, photo4];
+  const images = [photo1, photo2, photo4, photo6];
 
   return (
     <section id="charlas" className="bg-background">
