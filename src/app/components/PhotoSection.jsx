@@ -28,9 +28,7 @@ const PhotoSection = () => {
             </div>
           </div>
           <div className="flex-1">
-            <div className="">
-              <Carousel images={images} />
-            </div>
+            <Carousel images={images} />
           </div>
         </div>
       </div>
