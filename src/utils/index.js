@@ -52,7 +52,7 @@ export const cardInfo = [
     title: "Uniendo talento y comunidades",
     img: handshake,
     paragraph:
-      "En YME, nuestra misión es crear conexiones significativas entre talentos diversos y empresas innovadoras. Además, estamos comprometidos en integrar y empoderar comunidades indígenas en el sector minero.",
+      "En YME, nuestra misión es crear conexiones significativas entre talentos diversos y empresas innovadoras. Además, estamos comprometidos en integrar y empoderar comunidades en una variedad de sectores.",
   },
   {
     id: 2,
