@@ -8,7 +8,7 @@ const Expertise = () => {
       <div className="max-w-screen-xl mx-auto p-5">
         <div>
           <h2 className="text-4xl text-secondary font-bold text-center pb-10">
-            Areas de Expertise
+            Áreas de Expertise
           </h2>
         </div>
         <div>

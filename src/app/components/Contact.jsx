@@ -148,7 +148,7 @@ export default function Contact() {
               htmlFor="telNum"
               className="block text-sm font-semibold leading-6 text-text"
             >
-              Telefono
+              Teléfono
             </label>
             <div className="mt-2.5">
               <input
@@ -220,7 +220,7 @@ export default function Contact() {
                 htmlFor="acceptPolicy"
                 className="ml-2 text-sm font-semibold leading-6 text-text"
               >
-                Acepto que Yme pueda utilizar mis datos y compartirlos con posibles empleadores.
+                Acepto que YMe pueda utilizar mis datos y compartirlos con posibles empleadores.
                 {/* <a
                   href="#"
                   className="text-primary hover:text-secondary"

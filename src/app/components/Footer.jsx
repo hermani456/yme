@@ -21,7 +21,7 @@ const Footer = () => {
                 <li>Inicio</li>
               </Link>
               <Link href="/#mision">
-                <li>Mision y Vision</li>
+                <li>Misión y visión</li>
               </Link>
               <Link href="/#expertise">
                 <li>Expertise</li>
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center w-full pb-4 text-center text-sm text-secondary bottom-0 absolute">
-        <p>© 2024 Copyright: YME Recruiment</p>
+        <p>© 2024 Copyright: YME Recruitment</p>
       </div>
     </footer>
   );

@@ -12,7 +12,7 @@ const PhotoSection = () => {
     <section id="charlas" className="bg-background">
       <div className="max-w-screen-xl m-auto p-5">
         <h1 className="text-4xl text-center text-secondary font-bold pb-10">
-          Impulsa Tu Futuro con YME
+          Impulsa Tu Futuro con YMe
         </h1>
         <div className="flex flex-col lg:flex-row gap-5">
           <div className="flex-1">
