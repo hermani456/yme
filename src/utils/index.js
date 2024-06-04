@@ -52,7 +52,7 @@ export const cardInfo = [
     title: "Uniendo talento y comunidades",
     img: handshake,
     paragraph:
-      "En YME, nuestra misión es crear conexiones significativas entre talentos diversos y empresas innovadoras. Además, estamos comprometidos en integrar y empoderar comunidades en una variedad de sectores.",
+      "En YMe, nuestra misión es crear conexiones significativas entre talentos diversos y empresas innovadoras. Además, estamos comprometidos en integrar y empoderar comunidades en una variedad de sectores.",
   },
   {
     id: 2,
@@ -66,7 +66,7 @@ export const cardInfo = [
     title: "Sé parte del cambio",
     img: partners,
     paragraph:
-      "¿Buscas unirte a un equipo apasionado por la inclusión y la innovación? En YME, valoramos el talento y la diversidad. Descubre nuestras oportunidades laborales y únete a nosotros en este viaje hacia un futuro más inclusivo y equitativo.",
+      "¿Buscas unirte a un equipo apasionado por la inclusión y la innovación? En YMe, valoramos el talento y la diversidad. Descubre nuestras oportunidades laborales y únete a nosotros en este viaje hacia un futuro más inclusivo y equitativo.",
   },
 ];
 

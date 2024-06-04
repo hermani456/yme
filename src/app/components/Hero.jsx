@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="flex justify-center items-center h-full gap-5 flex-wrap flex-col md:flex-row">
           <div className="flex-1 mx-auto space-y-5">
             <h1 className="text-5xl md:text-8xl bg-gradient-to-r font-medium from-accent via-primary to-secondary font-bebasNeue inline text-transparent bg-clip-text">
-              YME Recruiment
+              YMe Recruiment
             </h1>
             <p className="text-text text-md md:text-xl max-w-prose font-medium leading-relaxed">
               Somos una agencia de reclutamiento y recursos humanos dedicada a
