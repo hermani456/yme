@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center w-full pb-4 text-center text-sm text-secondary bottom-0 absolute">
-        <p>© 2024 Copyright: YME Recruitment</p>
+        <p>© 2024 Copyright: YMe Recruitment</p>
       </div>
     </footer>
   );
