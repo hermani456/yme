@@ -18,7 +18,7 @@ const PhotoSection = () => {
           <div className="flex-1">
             <div className="flex justify-center items-center flex-col h-full">
               <p className="max-w-prose text-text font-medium text-md leading-relaxed ">
-                En YME, entendemos que dar el primer paso en el mundo laboral
+                En YMe, entendemos que dar el primer paso en el mundo laboral
                 puede ser un desafío. Por eso, nos dedicamos a apoyar a los
                 estudiantes universitarios locales en su transición del aula al
                 lugar de trabajo. Nuestra misión es capacitar a los futuros
