@@ -20,11 +20,14 @@ const Footer = () => {
               <Link href="/#home">
                 <li>Inicio</li>
               </Link>
-              <Link href="/#mision">
-                <li>Misión y visión</li>
+              <Link href="/#about">
+                <li>Nosotros</li>
               </Link>
               <Link href="/#expertise">
                 <li>Expertise</li>
+              </Link>
+              <Link href="/#charlas">
+                <li>Charlas</li>
               </Link>
               <Link href="/#contact">
                 <li>Contacto</li>
@@ -50,7 +53,7 @@ const Footer = () => {
             <ul className="">
               <li className="flex items-center gap-2">+5698765432</li>
               <li className="flex items-center gap-2">
-                <a href="mailto:contacto@yme.cl">contacto@yme.cl</a>
+                <a href="mailto:contacto@yme.cl">diego.campuzano@yme.cl</a>
               </li>
               <li className="flex items-center gap-2">Iquique</li>
             </ul>
