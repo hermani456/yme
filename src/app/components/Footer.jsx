@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="">
               <li className="flex items-center gap-2">+5698765432</li>
               <li className="flex items-center gap-2">
-                <a href="mailto:contacto@yme.cl">diego.campuzano@yme.cl</a>
+                <a href="mailto:diego.campuzano@yme.cl">diego.campuzano@yme.cl</a>
               </li>
               <li className="flex items-center gap-2">Iquique</li>
             </ul>
