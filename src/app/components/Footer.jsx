@@ -10,11 +10,9 @@ const Footer = () => {
           <div className="flex flex-col justify-center items-center gap-3 w-full sm:w-1/4 ">
             <div className="flex flex-col justify-center items-center">
               <Image src={footerLogo} alt="logo yme" width={90} height={90} />
-              <h3 className="text-2xl text-center">Yme</h3>
+              <h3 className="text-2xl text-center font-medium">YMe</h3>
+              <p className="text-center font-medium">Recruitment</p>
             </div>
-            <p className="text-center text-primary">
-              Recruiment
-            </p>
           </div>
           <div>
             <h3 className="text-2xl">Navegación</h3>
@@ -52,9 +50,7 @@ const Footer = () => {
             <ul className="">
               <li className="flex items-center gap-2">+5698765432</li>
               <li className="flex items-center gap-2">
-                <a href="mailto:contacto@yme.cl">
-                  contacto@yme.cl
-                </a>
+                <a href="mailto:contacto@yme.cl">contacto@yme.cl</a>
               </li>
               <li className="flex items-center gap-2">Iquique</li>
             </ul>
