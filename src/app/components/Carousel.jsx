@@ -30,7 +30,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="relative w-[25rem] min-h-[18.75rem] overflow-hidden rounded-md">
+      <div className="relative w-[25rem] min-h-[17rem] md:min-h-[18.75rem] overflow-hidden rounded-md">
         {images.map((src, index) => (
           <div
             ref={(el) => (imageRefs.current[index] = el)}
