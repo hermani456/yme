@@ -1,4 +1,6 @@
-import footerLogo from "../../../public/assets/svg/footerLogo.svg";
+// import footerLogo from "../../../public/assets/svg/footerLogo.svg";
+import footerLogo from "../../../public/assets/ime.png";
+
 import Image from "next/image";
 import Link from "next/link";
 
