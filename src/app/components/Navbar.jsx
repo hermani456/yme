@@ -4,10 +4,12 @@ import React, { useEffect } from "react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { logo } from "../../../public/assets/svg";
+// import { logo } from "../../../public/assets/svg";
+import logo from "../../../public/assets/svg/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "@/utils";
+// import logo from "../../../public/assets/imeheader.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
