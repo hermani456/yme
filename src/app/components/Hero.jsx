@@ -1,6 +1,7 @@
 import React from "react";
 import happy from "../../../public/assets/img/happy.webp";
 import Image from "next/image";
+import PhotoGrind from "./PhotoGrind";
 
 const Hero = () => {
   return (
@@ -24,8 +25,9 @@ const Hero = () => {
               más inclusivo, equitativo y verde.
             </p>
           </div>
-          <div className="flex flex-1 justify-center min-w-80">
+          <div className="flex flex-1 justify-center min-w-80 overflow-hidden">
             <Image src={happy} alt="foto" className="rounded-md" />
+            {/* <PhotoGrind /> */}
           </div>
         </div>
       </div>

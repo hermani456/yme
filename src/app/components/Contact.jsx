@@ -2,7 +2,6 @@
 import { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import TextAnimate from "@/components/TextAnimate";
 
 export default function Contact() {
   const [file, setFile] = useState(null);
@@ -87,24 +86,6 @@ export default function Contact() {
               />
             </div>
           </div>
-          {/* <div>
-            <label
-              htmlFor="apellido"
-              className="block text-sm font-semibold leading-6 text-text"
-            >
-              Apellido
-            </label>
-            <div className="mt-2.5">
-              <input
-                required
-                type="text"
-                name="apellido"
-                id="apellido"
-                autoComplete="family-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div> */}
           <div className="sm:col-span-2">
             <label
               htmlFor="cargo"
@@ -231,24 +212,6 @@ export default function Contact() {
               </label>
             </div>
           </div>
-          {/* <div className="sm:col-span-2">
-            <label
-              htmlFor="mensaje"
-              className="block text-sm font-semibold leading-6 text-text"
-            >
-              Mensaje
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                // required
-                name="mensaje"
-                id="mensaje"
-                rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                defaultValue={""}
-              />
-            </div>
-          </div> */}
         </div>
         <div className="mt-10">
           <button
