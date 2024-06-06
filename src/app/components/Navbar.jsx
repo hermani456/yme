@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-text">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-3">
         <div className="">
           <Image src={logo} alt="logo" width={125} className="m-0 p-0" />
         </div>
