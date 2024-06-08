@@ -37,16 +37,16 @@ const Footer = () => {
             </ul>
           </div>
           {/* <div>
-            <h3 className="text-2xl">Servicios</h3>
+            <h3 className="text-2xl">puestos</h3>
             <ul className="">
-              <a href="Corte1">
-                <li>Corte1</li>
+              <a href="puesto1">
+                <li>puesto1</li>
               </a>
-              <a href="corte2">
-                <li>corte2</li>
+              <a href="puesto2">
+                <li>puesto2</li>
               </a>
-              <a href="corte3">
-                <li>corte3</li>
+              <a href="puesto3">
+                <li>puesto3</li>
               </a>
             </ul>
           </div> */}
@@ -55,7 +55,9 @@ const Footer = () => {
             <ul className="">
               <li className="flex items-center gap-2">+5698765432</li>
               <li className="flex items-center gap-2">
-                <a href="mailto:diego.campuzano@yme.cl">diego.campuzano@yme.cl</a>
+                <a href="mailto:diego.arancibia@yme.cl">
+                  diego.arancibia@yme.cl
+                </a>
               </li>
               <li className="flex items-center gap-2">Iquique</li>
             </ul>

@@ -1,8 +1,10 @@
-import { card1, card2, card3 } from "../../public/assets/svg/index";
-import { handshake, engineering, partners } from "../../public/assets/img/cards/index";
+import {
+  handshake,
+  engineering,
+  partners,
+} from "../../public/assets/img/cards/index";
 import {
   abastecimiento,
-  computing,
   construccion,
   energia,
   finanzas,
@@ -70,8 +72,6 @@ export const cardInfo = [
   },
 ];
 
-// minería, logística, retail, energía, finanzas, química, tecnología, construcción, consumo masivo, manufactura, abastecimiento, ventas, marketing, recursos humanos y proyectos.
-
 export const expertise = [
   {
     id: 1,
@@ -123,11 +123,6 @@ export const expertise = [
     title: "Construcción",
     img: construccion,
   },
-  // {
-  //   id: 11,
-  //   title: "Consumo Masivo",
-  //   img: consumoMasivo,
-  // },
   {
     id: 12,
     title: "Manufactura",

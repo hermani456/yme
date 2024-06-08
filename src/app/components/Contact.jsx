@@ -52,10 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <section
-      className="bg-background font-montserrat p-5"
-      id="contact"
-    >
+    <section className="bg-background font-montserrat p-5" id="contact">
       <div className="max-w-screen-xl mx-auto my-auto text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-museomoderno font-bold tracking-tight text-secondary">
           Contacto
@@ -174,7 +171,9 @@ export default function Contact() {
                     fileExtension !== "odt"
                   ) {
                     e.target.value = null;
-                    return alert("Solo se permiten archivos .pdf, .doc, .docx y .odt");
+                    return alert(
+                      "Solo se permiten archivos .pdf, .doc, .docx y .odt"
+                    );
                   }
                   setFileExtension(fileExtension);
                   const reader = new FileReader();
@@ -201,14 +200,8 @@ export default function Contact() {
                 htmlFor="acceptPolicy"
                 className="ml-2 text-sm font-semibold leading-6 text-text"
               >
-                Acepto que YMe pueda utilizar mis datos y compartirlos con posibles empleadores.
-                {/* <a
-                  href="#"
-                  className="text-primary hover:text-secondary"
-                  target="_blank"
-                >
-                  política de privacidad
-                </a> */}
+                Acepto que YMe pueda utilizar mis datos y compartirlos con
+                posibles empleadores.
               </label>
             </div>
           </div>

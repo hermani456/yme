@@ -1,7 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
+import { useState, useRef } from "react";
 // import logo from "../assets/logos/logo.svg";
-import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // import { logo } from "../../../public/assets/svg";
@@ -12,7 +11,7 @@ import { navItems } from "@/utils";
 // import logo from "../../../public/assets/imeheader.png";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const ref = useRef(null);
   gsap.registerPlugin(useGSAP);
@@ -23,7 +22,7 @@ const Navbar = () => {
         gsap.to(ref.current, {
           duration: 0.5,
           autoAlpha: 1,
-          maxHeight: 1000, // larger than the actual height
+          maxHeight: 1000,
           ease: "power1.inOut",
           onStart: () => gsap.set(ref.current, { display: "block" }),
         });
@@ -38,8 +37,6 @@ const Navbar = () => {
       }
     }
   }, [isMenuOpen]);
-
-  // const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className="bg-text">
@@ -68,7 +65,6 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        {/* <div>YME</div> */}
         <div
           ref={ref}
           className={`w-full md:block md:w-auto mb-5 ${
