@@ -9,8 +9,6 @@ import img8 from "../../../public/assets/img/land/8.jpg";
 import img9 from "../../../public/assets/img/land/9.jpg";
 import Image from "next/image";
 
-import React from "react";
-
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 const Photogrid = () => {

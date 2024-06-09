@@ -41,7 +41,7 @@ const Carousel = ({ images }) => {
               width={400}
               height={200}
               alt="carousel"
-              className="absolute inset-0 object-cover"
+              className="absolute inset-0 object-fill"
               onContextMenu={(e) => e.preventDefault()}
             />
           </div>

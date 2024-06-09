@@ -4,9 +4,12 @@ import photo1 from "../../../public/assets/img/photos/1.jpg";
 import photo2 from "../../../public/assets/img/photos/2.jpg";
 import photo4 from "../../../public/assets/img/photos/4.jpg";
 import photo6 from "../../../public/assets/img/photos/6.jpg";
+import photo7 from "../../../public/assets/img/photos/7.jpg";
+import photo8 from "../../../public/assets/img/photos/8.jpg";
+import photo10 from "../../../public/assets/img/photos/10.jpg";
 
 const PhotoSection = () => {
-  const images = [photo1, photo2, photo4, photo6];
+  const images = [photo1, photo2, photo4, photo6, photo7, photo8, photo10];
 
   return (
     <section id="charlas" className="bg-background">
