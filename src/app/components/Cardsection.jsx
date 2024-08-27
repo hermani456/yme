@@ -4,11 +4,12 @@ import { cardInfo } from "../../utils/index";
 
 const CardSection = () => {
   return (
-    <section id="about" className="bg-background pb-5">
+    <div className="bg-background">
+      <section id="about" className="pb-20 max-w-screen-xl mx-auto">
       <h2 className="text-4xl text-secondary max-w-[30ch] mx-auto font-bold text-center pb-5">
         Transformando Recursos Humanos: Talento, Inclusión y Comunidad
       </h2>
-      <div className="max-w-screen-xl mx-auto min-h-[60vh] grida p-5">
+      <div className="flex flex-wrap gap-5 px-5">
         {cardInfo.map((card) => (
           <Card
             key={card.id}
@@ -19,6 +20,7 @@ const CardSection = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

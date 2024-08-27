@@ -11,6 +11,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [acceptPolicy, setAcceptPolicy] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const notify = () =>
     toast.success("Mensaje enviado", {
@@ -31,6 +32,7 @@ export default function Contact() {
     if (!acceptPolicy) {
       return alert("Debes aceptar la política de privacidad");
     }
+    setLoading(true);
     const userData = {
       name,
       cargo,
@@ -47,6 +49,7 @@ export default function Contact() {
       if (res.ok) {
         notify();
         form.current.reset();
+        setLoading(false);
       }
     });
   };
@@ -209,9 +212,25 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
+            disabled={loading}
             className="block w-full rounded-md bg-accent px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
-            Enviar
+            {loading ? (
+              <div className="flex justify-center gap-2">
+                <div>Enviando</div>
+                <div className="w-5 fill-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="animate-spin"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
+                  </svg>
+                </div>
+              </div>
+            ) : (
+              "Enviar"
+            )}
           </button>
           <ToastContainer />
         </div>

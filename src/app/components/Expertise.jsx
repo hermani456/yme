@@ -16,7 +16,7 @@ const Expertise = () => {
             {expertise.map((area) => (
               <div key={area.id} className="flex flex-col items-center">
                 <h2 className="text-text font-medium">{area.title}</h2>
-                <Image src={area.img} alt="svg image" className="w-12" />
+                <Image src={area.img} alt="svg image" className="w-12 pointer-events-none" />
               </div>
             ))}
           </div>
