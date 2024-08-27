@@ -20,7 +20,7 @@ const PhotoSection = () => {
         <div className="flex flex-col lg:flex-row gap-5">
           <div className="flex-1">
             <div className="flex justify-center items-center flex-col h-full">
-              <p className="max-w-prose text-text font-medium text-md leading-relaxed ">
+              <p className="max-w-prose text-text font-medium text-md leading-relaxed text-pretty">
                 En YMe, entendemos que dar el primer paso en el mundo laboral
                 puede ser un desafío. Por eso, nos dedicamos a apoyar a los
                 estudiantes universitarios locales en su transición del aula al

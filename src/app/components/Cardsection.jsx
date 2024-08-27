@@ -6,7 +6,7 @@ const CardSection = () => {
   return (
     <div className="bg-background">
       <section id="about" className="pb-20 max-w-screen-xl mx-auto">
-      <h2 className="text-4xl text-secondary max-w-[30ch] mx-auto font-bold text-center pb-5">
+      <h2 className="text-4xl text-secondary max-w-[30ch] mx-auto font-bold text-center pb-10">
         Transformando Recursos Humanos: Talento, Inclusión y Comunidad
       </h2>
       <div className="flex flex-wrap gap-5 px-5">

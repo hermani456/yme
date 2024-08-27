@@ -13,7 +13,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 const Photogrid = () => {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 md:grid-cols-3 gap-4 pointer-events-none">
       <div className="grid gap-4">
         {images.slice(0, 3).map((img, index) => (
           <div key={index}>

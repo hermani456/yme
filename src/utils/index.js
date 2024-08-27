@@ -23,28 +23,28 @@ import {
 export const navItems = [
   {
     id: 1,
-    title: "Inicio",
-    href: "#home",
+    name: "Inicio",
+    path: "#home",
   },
   {
     id: 2,
-    title: "Nosotros",
-    href: "#about",
+    name: "Nosotros",
+    path: "#about",
   },
   {
     id: 3,
-    title: "Expertise",
-    href: "#expertise",
+    name: "Expertise",
+    path: "#expertise",
   },
   {
     id: 4,
-    title: "Charlas",
-    href: "#charlas",
+    name: "Charlas",
+    path: "#charlas",
   },
   {
     id: 5,
-    title: "Contacto",
-    href: "#contact",
+    name: "Contacto",
+    path: "#contact",
   },
 ];
 
