@@ -16,83 +16,83 @@ export default function Component() {
   const logoContainerRef = useRef(null);
   const navLinksRef = useRef(null);
 
-  gsap.registerPlugin(useGSAP);
+  // gsap.registerPlugin(useGSAP);
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
+  // useGSAP(() => {
+  //   const tl = gsap.timeline();
 
-    const originalPosition = {
-      top: logoRef.current.offsetTop,
-      left: logoRef.current.offsetLeft,
-      width: logoRef.current.offsetWidth,
-    };
+  //   const originalPosition = {
+  //     top: logoRef.current.offsetTop,
+  //     left: logoRef.current.offsetLeft,
+  //     width: logoRef.current.offsetWidth,
+  //   };
 
-    const originalPositionSmall = {
-      top: logoSmallRef.current.offsetTop,
-      left: logoSmallRef.current.offsetLeft,
-    };
+  //   const originalPositionSmall = {
+  //     top: logoSmallRef.current.offsetTop,
+  //     left: logoSmallRef.current.offsetLeft,
+  //   };
 
-    gsap.set(logoSmallRef.current, {
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      x: "-50%",
-      y: "-50%",
-    });
+  //   gsap.set(logoSmallRef.current, {
+  //     position: "absolute",
+  //     top: "50%",
+  //     left: "50%",
+  //     x: "-50%",
+  //     y: "-50%",
+  //   });
 
-    tl.to({}, { duration: 0.5 });
+  //   tl.to({}, { duration: 0.5 });
 
-    tl.to(logoSmallRef.current, {
-      top: originalPositionSmall.top,
-      left: originalPositionSmall.left,
-      x: 0,
-      y: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+  //   tl.to(logoSmallRef.current, {
+  //     top: originalPositionSmall.top,
+  //     left: originalPositionSmall.left,
+  //     x: 0,
+  //     y: 0,
+  //     duration: 1,
+  //     ease: "power2.inOut",
+  //   });
 
-    gsap.set(logoRef.current, {
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      x: "-50%",
-      y: "-50%",
-      width: "10rem",
-    });
+  //   gsap.set(logoRef.current, {
+  //     position: "absolute",
+  //     top: "50%",
+  //     left: "50%",
+  //     x: "-50%",
+  //     y: "-50%",
+  //     width: "10rem",
+  //   });
 
-    tl.to({}, { duration: 0.5 });
+  //   tl.to({}, { duration: 0.5 });
 
-    tl.to(logoRef.current, {
-      top: originalPosition.top,
-      left: originalPosition.left,
-      width: originalPosition.width,
-      x: 0,
-      y: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+  //   tl.to(logoRef.current, {
+  //     top: originalPosition.top,
+  //     left: originalPosition.left,
+  //     width: originalPosition.width,
+  //     x: 0,
+  //     y: 0,
+  //     duration: 1,
+  //     ease: "power2.inOut",
+  //   });
 
-    tl.from(
-      ref.current,
-      {
-        height: "100vh",
-        duration: 1,
-        ease: "power2.inOut",
-      },
-      "-=0.5"
-    );
+  //   tl.from(
+  //     ref.current,
+  //     {
+  //       height: "100vh",
+  //       duration: 1,
+  //       ease: "power2.inOut",
+  //     },
+  //     "-=0.5"
+  //   );
 
-    tl.from(
-      navLinksRef.current,
-      {
-        opacity: 0,
-        y: -50,
-        duration: 1,
-        ease: "power2.inOut",
-      },
-      "-=1.5"
-    );
-  });
+  //   tl.from(
+  //     navLinksRef.current,
+  //     {
+  //       opacity: 0,
+  //       y: -50,
+  //       duration: 1,
+  //       ease: "power2.inOut",
+  //     },
+  //     "-=1.5"
+  //   );
+  // });
 
   return (
     <div className="bg-text">
