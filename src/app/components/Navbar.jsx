@@ -51,24 +51,9 @@ export default function Component() {
                 ))}
               </div>
             </nav>
-            {/* <div className="flex ml-auto font-opens">
-              <Link href="/register">
-                <Button
-                  variant="ghost"
-                  className="text-white font-semibold rounded-full mr-3 hover:bg-accent/30 hover:text-white transition-colors"
-                >
-                  Registrate
-                </Button>
-              </Link>
-              <Link href="/login">
-                <Button
-                  variant="unstyled"
-                  className="bg-primary font-semibold text-black rounded-full hover:bg-primary/70 transition-colors"
-                >
-                  Iniciar sesión
-                </Button>
-              </Link>
-            </div> */}
+            <div className="flex lg:hidden ml-auto">
+              <Image src={logo} alt="logo" width={100} height={100} />
+            </div>
           </div>
         </header>
       </div>
