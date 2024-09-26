@@ -129,6 +129,7 @@ export default function Component() {
                 width={100}
                 height={100}
                 ref={logoRef}
+                className="pointer-events-none"
               />
             </div>
             <nav className="hidden lg:flex justify-center items-center ml-auto">
