@@ -2,6 +2,7 @@ import React from "react";
 import happy from "../../../public/assets/img/happy.webp";
 import Image from "next/image";
 import Photogrind from "./Photogrid";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -13,17 +14,17 @@ const Hero = () => {
               YMe Recruiment
             </h1>
             <p className="text-text text-md md:text-xl max-w-prose font-medium leading-relaxed">
-              Somos una agencia de reclutamiento y recursos humanos dedicada a
-              la integración de talentos locales, potenciando su participación
-              en las diferentes industrias de la macrozona norte. Nos aseguramos
-              de que los talentos locales que integramos aporten un valor
-              significativo a nuestros clientes, acompañándolos durante su
-              onboarding para garantizar la satisfacción de todas las partes.
-              Nuestra misión es crear conexiones sólidas y oportunidades
-              laborales significativas para todos, en un entorno inclusivo,
-              equitativo y verde. Únete a nosotros en este viaje hacia un futuro
-              más inclusivo, equitativo y verde.
+              Conectamos talentos locales con oportunidades significativas en la
+              macrozona norte. Impulsamos un futuro inclusivo, equitativo y
+              sostenible. Únete a nosotros.
             </p>
+            <div>
+              <Link href="#contact" className="mt-5">
+                <button className="text-white bg-accent px-3 py-2 rounded-md font-bebasNeue hover:bg-secondary transition-colors font-semibold text-sm lg:text-md">
+                  Envianos tu CV
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="flex flex-1 justify-center min-w-80 overflow-hidden">
             {/* <Image src={happy} alt="foto" className="rounded-md" /> */}
