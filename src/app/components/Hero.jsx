@@ -21,7 +21,7 @@ const Hero = () => {
             <div>
               <Link href="#contact" className="mt-5">
                 <button className="text-white bg-accent px-3 py-2 rounded-md hover:bg-secondary transition-colors font-semibold text-sm lg:text-md">
-                  Envianos tu CV
+                  Envíanos tu CV
                 </button>
               </Link>
             </div>
