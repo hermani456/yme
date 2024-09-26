@@ -20,7 +20,7 @@ const Photogrid = () => {
             <Image
               src={img}
               alt="foto"
-              className="h-auto max-w-full rounded-lg"
+              className="h-full max-w-full rounded-lg"
             />
           </div>
         ))}
@@ -31,7 +31,7 @@ const Photogrid = () => {
             <Image
               src={img}
               alt="foto"
-              className="h-auto max-w-full rounded-lg"
+              className="h-full max-w-full rounded-lg"
             />
           </div>
         ))}
@@ -42,7 +42,7 @@ const Photogrid = () => {
             <Image
               src={img}
               alt="foto"
-              className="h-auto max-w-full rounded-lg"
+              className="h-full max-w-full rounded-lg"
             />
           </div>
         ))}
