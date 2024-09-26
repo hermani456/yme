@@ -27,6 +27,9 @@ module.exports = {
           to: { height: "0" },
         },
       },
+      fontFamily: {
+        bebasNeue: "var(--font-bebas)",
+      },
       colors: {
         text: "#031a6d",
         background: "#F9F7F3",

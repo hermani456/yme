@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="max-w-screen-xl mx-auto min-h-[90vh] p-5 my-auto flex items-center">
         <div className="flex justify-center items-center h-full gap-5 flex-wrap flex-col lg:flex-row">
           <div className="flex-1 space-y-5">
-            <h1 className="text-5xl md:text-7xl bg-gradient-to-r font-medium from-accent via-primary to-secondary font-bebasNeue inline text-transparent bg-clip-text">
+            <h1 className="text-5xl md:text-8xl font-medium bg-gradient-to-r from-accent via-primary to-secondary font-bebasNeue inline text-transparent bg-clip-text">
               YMe Recruiment
             </h1>
             <p className="text-text text-md max-w-prose font-medium leading-relaxed">
@@ -20,7 +20,7 @@ const Hero = () => {
             </p>
             <div>
               <Link href="#contact" className="mt-5">
-                <button className="text-white bg-accent px-3 py-2 rounded-md font-bebasNeue hover:bg-secondary transition-colors font-semibold text-sm lg:text-md">
+                <button className="text-white bg-accent px-3 py-2 rounded-md hover:bg-secondary transition-colors font-semibold text-sm lg:text-md">
                   Envianos tu CV
                 </button>
               </Link>

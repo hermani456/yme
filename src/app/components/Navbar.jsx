@@ -95,7 +95,7 @@ export default function Component() {
   // });
 
   return (
-    <div className="bg-text">
+    <div className="bg-text font-bebasNeue">
       <div className="max-w-screen-xl mx-auto" ref={ref}>
         <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
           <Sheet>
@@ -105,7 +105,7 @@ export default function Component() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="bg-text">
+            <SheetContent side="left" className="bg-text font-bebasNeue">
               <div className="grid gap-2 py-6">
                 {navItems.map((link) => (
                   <SheetClose asChild key={link.id}>
@@ -137,7 +137,7 @@ export default function Component() {
                 {navItems.map((link) => (
                   <Link
                     href={link.path}
-                    className="text-white font-opens flex justify-center items-center hover:text-primary text-xl transition-colors"
+                    className="text-white flex justify-center items-center hover:text-primary text-xl transition-colors"
                     key={link.id}
                     prefetch={false}
                   >

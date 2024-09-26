@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between gap-5">
           <div className="flex flex-col justify-center items-center gap-3 w-full sm:w-1/4 ">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center font-bebasNeue">
               <Image src={footerLogo} alt="logo yme" width={90} height={90} />
               <h3 className="text-2xl text-center font-medium">YMe</h3>
               <p className="text-center font-medium">Recruitment</p>
