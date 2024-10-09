@@ -1,7 +1,7 @@
 import React from "react";
 import happy from "../../../public/assets/img/happy.webp";
 import Image from "next/image";
-import Photogrind from "./Photogrid";
+import Photogrid from "./Photogrid";
 import Link from "next/link";
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-1 justify-center min-w-80 overflow-hidden">
             {/* <Image src={happy} alt="foto" className="rounded-md" /> */}
-            <Photogrind />
+            <Photogrid />
           </div>
         </div>
       </div>
